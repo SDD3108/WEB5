@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/todo.js"></script>
+    <title>Document</title>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800">
+    <header class="border-b border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+            <a href="index.html" class="font-semibold">JavaScript Basics</a>
+            <nav aria-label="Main navigation" class="flex flex-wrap gap-1">
+                <a href="index.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">Basics</a>
+                <a href="dom.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">DOM</a>
+                <a href="events.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">Events</a>
+                <a href="todo.html" class="rounded-md px-3 py-2 text-sm bg-blue-50 font-semibold text-blue-700" aria-current="page">To-Do</a>
+            </nav>
+        </div>
+    </header>
+    <main class="mx-auto max-w-3xl px-5 py-10">
+        <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Assignment 5</p>
+        <h1 class="mb-3 text-3xl font-bold tracking-tight">My task list</h1>
+        <p class="mb-4 text-sm leading-6 text-slate-600">Satimov Damir · SE-2525</p>
+        <div class="space-y-5">
+            <section class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Task 8</p>
+                <h2 class="mb-4 text-xl font-semibold">Interactive To-Do List</h2>
+                <p class="mb-4 text-sm leading-6 text-slate-600">Add tasks, tick them off and delete them. Tasks are kept only until you reload or leave this page.</p>
+                <form id="todo-form" class="mb-5" novalidate>
+                    <label for="task-input" class="text-sm font-medium">New task</label>
+                    <div class="mt-2 flex flex-col gap-3 sm:flex-row">
+                        <input id="task-input" type="text" maxlength="200" class="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2.5 focus:outline-blue-600" placeholder="What do you need to do?" aria-describedby="todo-status">
+                        <button type="submit" class="rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Add Task</button>
+                    </div>
+                </form>
+                <p id="todo-status" role="status" class="mb-4 text-sm text-slate-600">No tasks yet. Add your first one.</p>
+                <ul id="task-list" class="space-y-3"></ul>
+            </section>
+        </div>
+    </main>
+    <footer class="px-5 pb-7 text-center text-xs text-slate-500">
+        <p>Satimov Damir · SE-2525 · Web Technologies</p>
+    </footer>
+</body>
+</html>

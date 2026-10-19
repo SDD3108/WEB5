@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/events.js"></script>
+    <title>Document</title>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-800">
+    <header class="border-b border-slate-200 bg-white">
+        <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+            <a href="index.html" class="font-semibold">JavaScript Basics</a>
+            <nav aria-label="Main navigation" class="flex flex-wrap gap-1">
+                <a href="index.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">Basics</a>
+                <a href="dom.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">DOM</a>
+                <a href="events.html" class="rounded-md px-3 py-2 text-sm bg-blue-50 font-semibold text-blue-700" aria-current="page">Events</a>
+                <a href="todo.html" class="rounded-md px-3 py-2 text-sm hover:bg-slate-100">To-Do</a>
+            </nav>
+        </div>
+    </header>
+    <main class="mx-auto max-w-3xl px-5 py-10">
+        <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Assignment 5</p>
+        <h1 class="mb-3 text-3xl font-bold tracking-tight">Mouse, keyboard & calculator</h1>
+        <p class="mb-4 text-sm leading-6 text-slate-600">Satimov Damir · SE-2525</p>
+        <div class="space-y-5">
+            <section class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Task 5</p>
+                <h2 class="mb-4 text-xl font-semibold">Mouse events</h2>
+                <div id="hover-box" class="rounded-lg bg-blue-100 p-8 text-center">Move your mouse over this box.</div>
+            </section>
+            <section class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Task 6</p>
+                <h2 class="mb-4 text-xl font-semibold">Keyboard events</h2>
+                <label for="live-input" class="text-sm font-medium">Type something</label>
+                <input id="live-input" type="text" class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 focus:border-blue-600 focus:outline-2 focus:outline-blue-100" placeholder="Start typing...">
+                <p class="mt-4 break-words">Current value: <span id="live-output" aria-live="polite"></span></p>
+            </section>
+            <section class="rounded-xl border border-slate-200 bg-white p-6">
+                <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-blue-700">Task 7</p>
+                <h2 class="mb-4 text-xl font-semibold">Calculator</h2>
+                <form id="calculator-form" novalidate>
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="first-number" class="text-sm font-medium">First number</label>
+                            <input id="first-number" type="number" step="any" required class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 focus:border-blue-600 focus:outline-2 focus:outline-blue-100">
+                        </div>
+                        <div>
+                            <label for="second-number" class="text-sm font-medium">Second number</label>
+                            <input id="second-number" type="number" step="any" required class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 focus:border-blue-600 focus:outline-2 focus:outline-blue-100">
+                        </div>
+                    </div>
+                    <label for="operation" class="mt-4 block text-sm font-medium">Operation</label>
+                    <select id="operation" class="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 focus:border-blue-600 focus:outline-2 focus:outline-blue-100">
+                        <option value="add">Addition (+)</option>
+                        <option value="subtract">Subtraction (−)</option>
+                        <option value="multiply">Multiplication (×)</option>
+                        <option value="divide">Division (÷)</option>
+                    </select>
+                    <button type="submit" class="mt-5 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Calculate</button>
+                    <p id="calculation-result" role="status" class="mt-4 break-words font-medium">Result: —</p>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="px-5 pb-7 text-center text-xs text-slate-500">
+        <p>Satimov Damir · SE-2525 · Web Technologies</p>
+    </footer>
+</body>
+</html>

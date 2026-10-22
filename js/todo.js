@@ -2,6 +2,7 @@ const todoForm = document.querySelector("#todo-form");
 const taskInput = document.querySelector("#task-input");
 const taskList = document.querySelector("#task-list");
 const todoStatus = document.querySelector("#todo-status");
+const removeButton = document.getElementById("remove-all");
 let tasks = []
 let nextId = 1
 
@@ -71,3 +72,26 @@ todoForm.addEventListener("submit", (event) => {
     taskInput.focus()
 });
 renderTasks()
+
+removeButton.addEventListener("click",()=>{
+    console.log(tasks);
+    tasks.forEach(element => {
+        tasks = tasks.filter((item) => item.id !== element.id)
+        renderTasks()
+        taskInput.focus()
+    });
+    // renderTasks()
+    // taskInput.focus()
+    console.log(tasks);
+    // taskInput.focus();
+    
+    
+    
+})
+// todoForm.addEventListener("click",()=>{
+//     tasks.forEach(element => {
+//         tasks.pop(element);
+//     });
+//     console.log(tasks);
+    
+// })
